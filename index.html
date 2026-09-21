@@ -7,24 +7,49 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="cinematic" aria-hidden="true">
+    <div class="cinematic-label">CAL-OF // ARCHIVE FOOTAGE 07</div>
+    <div class="cinematic-title">NEON OUTPOST<br><span>IS UNDER ATTACK</span></div>
+    <div class="cinematic-subtitle">INITIALISATION DU SECTEUR...</div>
+    <div id="blast-layer"></div>
+  </div>
+
   <div id="hud" class="hidden">
-    <div class="topbar"><div class="brand">CAL-<span>OF</span></div><div class="mission">MISSION 01 // NEON OUTPOST</div><div id="timer">00:00</div></div>
+    <div class="topbar">
+      <div class="brand">CAL-<span>OF</span></div>
+      <div class="mission">MISSION 01 // NEON OUTPOST</div>
+      <div id="timer">00:00</div>
+    </div>
     <div class="crosshair"><i></i><i></i><i></i><i></i><b></b></div>
-    <div class="stats"><div><small>SCORE</small><strong id="score">000000</strong></div><div><small>VAGUE</small><strong id="wave">01</strong></div><div><small>ÉNERGIE</small><div class="bar"><span id="energy"></span></div></div></div>
+    <div class="stats">
+      <div><small>SCORE</small><strong id="score">000000</strong></div>
+      <div><small>VAGUE</small><strong id="wave">01</strong></div>
+      <div><small>ÉNERGIE</small><div class="bar"><span id="energy"></span></div></div>
+    </div>
     <div id="status">ÉLIMINEZ LES DRONES</div>
     <div id="minimap"><span class="player-dot"></span></div>
     <div class="ammo"><span id="ammo">12</span><small>/ ∞<br>PLASMA</small></div>
   </div>
+
   <main id="start-screen">
-    <div class="scanlines"></div><div class="logo">CAL-<em>OF</em></div>
+    <div class="scanlines"></div>
+    <div class="logo">CAL-<em>OF</em></div>
     <p class="eyebrow">SIMULATION TACTIQUE // SECTEUR 07</p>
     <h1>NEON<br><span>OUTPOST</span></h1>
     <p class="intro">Une escouade de drones a pris le contrôle de l'avant-poste.<br>Nettoie l'arène. Récupère les noyaux. Survis à la vague.</p>
     <button id="start-button">JOUER LA MISSION <b>↗</b></button>
-    <div class="controls"><span><b>WASD</b> DÉPLACER</span><span><b>SOURIS</b> VISER</span><span><b>CLIC</b> TIRER</span></div>
+    <div class="controls"><span><b>ZQSD</b> DÉPLACER</span><span><b>SOURIS</b> VISER</span><span><b>CLIC</b> TIRER</span></div>
     <p class="credit">WEBGL // THREE.JS // ASSET STREAM ONLINE</p>
   </main>
-  <div id="end-screen" class="hidden"><p class="eyebrow">MISSION TERMINÉE</p><h2 id="end-title">SECTEUR SÉCURISÉ</h2><p id="end-copy"></p><button id="restart-button">REJOUER <b>↗</b></button></div>
+
+  <div id="end-screen" class="hidden">
+    <p class="eyebrow">MISSION TERMINÉE</p>
+    <h2 id="end-title">SECTEUR SÉCURISÉ</h2>
+    <p id="end-copy"></p>
+    <button id="restart-button">REJOUER <b>↗</b></button>
+  </div>
+
+  <script src="cinematic.js"></script>
   <script type="module" src="game.js"></script>
 </body>
 </html>

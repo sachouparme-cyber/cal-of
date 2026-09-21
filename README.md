@@ -1,22 +1,39 @@
-# CAL-OF
+# cal-of
 
-Un mini-jeu 3D jouable directement dans le navigateur : une arène néon, des drones ennemis, des cristaux à récupérer et un modèle 3D chargé depuis les exemples publics de Three.js.
+Jeu 3D de type FPS / arena néon, jouable dans le navigateur avec Three.js.
 
-## Jouer
+## Contrôles
 
-Ouvre `index.html` dans un navigateur moderne, puis clique sur **JOUER**.
+- ZQSD : déplacement
+- Souris : regarder autour
+- Clic gauche : tirer
+- Shift : sprint
+- Échap : pointer lock / libérer la souris
 
-- **WASD** : se déplacer
-- **Souris** : regarder autour de soi
-- **Clic gauche** : tirer
-- **Shift** : courir
-- **Échap** : libérer la souris
+## Fonctionnalités
 
-Le jeu utilise Three.js via CDN et peut fonctionner sans installation. Le modèle 3D distant est uniquement un bonus : une capsule de secours est générée si le chargement échoue.
+- Arène futuriste et secteur de combat néon
+- Vagues d’ennemis drones
+- Cristaux à récupérer pour augmenter le score
+- Système de dégâts, rechargement, vague, timer
+- Cinématique de démarrage avec explosions
+- Compatible navigateur moderne sans installation
 
-## Sources des assets
+## Sources de ressources publiques
 
-- Moteur 3D : [Three.js](https://github.com/mrdoob/three.js)
-- Modèle de personnage de démonstration : [RobotExpressive.glb](https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf/RobotExpressive), utilisé depuis les exemples publics de Three.js.
+Le projet utilise des assets publics et des bibliothèques open-source depuis des CDN GitHub/JSDelivr pour rester simple à lancer.
 
-La carte de l'arène est générée dans `game.js` pour rester légère et jouable sans téléchargement supplémentaire.
+- Three.js : https://threejs.org/
+- Robot model example : https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf/RobotExpressive.glb
+
+## Lancer le jeu
+
+Ouvre simplement `index.html` dans un navigateur moderne.
+
+Pour un lancement plus fiable, utilise un petit serveur local comme :
+
+```bash
+python -m http.server 8000
+```
+
+Puis ouvre : http://localhost:8000
